@@ -211,7 +211,7 @@
             <!-- 第一行说明文字 (可选，标明左边是什么，右边是什么) -->
             <div class="columns is-centered has-text-centered" style="margin-bottom: 1rem;">
               <div class="column is-one-half">
-                <h4 class="title is-5">Input Image</h4> <!-- 左侧标题 -->
+                <h4 class="title is-5">Camera Trajectory</h4> <!-- 左侧标题 -->
               </div>
               <div class="column is-one-half">
                 <h4 class="title is-5">Generated Video</h4> <!-- 右侧标题 -->
@@ -224,11 +224,11 @@
             <!-- is-mobile 保证在手机端也是左右排列，如果不加，手机上会变成上下排列 -->
             <div class="columns is-vcentered is-centered is-mobile">
               <!-- 左侧：图片 -->
-              <div class="column is-one-half has-text-centered">
-                <img src="./static/videos/vis_cam_crop1.jpg" alt="Input 1" style="width: 100%;">
+              <div class="column is-one-quarter has-text-centered">
+                <img src="./static/videos/vis_cam_crop_1.jpg" alt="Input 1" style="width: 100%;">
               </div>
               <!-- 右侧：视频 -->
-              <div class="column is-one-half has-text-centered">
+              <div class="column is-three-quarters has-text-centered">
                 <video controls muted preload playsinline autoplay loop width="100%">
                   <source src="./static/videos/compare1.mp4" type="video/mp4">
                 </video>
