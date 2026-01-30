@@ -135,6 +135,23 @@
     <div class="container is-max-desktop">
       <!-- Abstract. -->
       <h2 class="title is-3">Abstract</h2>
+
+      <div class="columns is-vcentered">
+        <div class="column is-7">
+          <div class="content has-text-justified">
+            <p>
+                Camera control has been extensively studied in conditioned video generation; however, performing precisely altering the camera trajectories while faithfully preserving the video content remains a challenging task. The mainstream approach to achieving precise camera control is warping a 3D representation according to the target trajectory. However, such methods fail to fully leverage the 3D priors of video diffusion models (VDMs) and often fall into the Inpainting Trap, resulting in subject inconsistency and degraded generation quality. To address this problem, we propose DepthDirector, a video re-rendering framework with precise camera controllability. By leveraging the depth video from explicit 3D representation as camera-control guidance, our method can faithfully reproduce the dynamic scene of an input video under novel camera trajectories. Specifically, we design a View-Content Dual-Stream Condition mechanism that injects both the source video and the warped depth sequence rendered under the target viewpoint into the pretrained video generation model. This geometric guidance signal enables VDMs to comprehend camera movements and leverage their 3D understanding capabilities, thereby facilitating precise camera control and consistent content generation. Next, we introduce a lightweight LoRA-based video diffusion adapter to train our framework, fully preserving the knowledge priors of VDMs. Additionally, we construct a large-scale multi-camera synchronized dataset named MultiCam-WarpData using Unreal Engine 5, containing 8K videos across 1K dynamic scenes. Extensive experiments show that DepthDirector outperforms existing methods in both camera controllability and visual quality. Our code and dataset will be publicly available.  
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-5 has-text-centered">
+            <figure class="image">
+            <img src="static/videos/warp.jpg" alt="teaser">
+            </figure>
+        </div>
+      </div>
+
       <div class="content has-text-justified">
         <p>
             Camera control has been extensively studied in conditioned video generation; however, performing precisely altering the camera trajectories while faithfully preserving the video content remains a challenging task. The mainstream approach to achieving precise camera control is warping a 3D representation according to the target trajectory. However, such methods fail to fully leverage the 3D priors of video diffusion models (VDMs) and often fall into the Inpainting Trap, resulting in subject inconsistency and degraded generation quality. To address this problem, we propose DepthDirector, a video re-rendering framework with precise camera controllability. By leveraging the depth video from explicit 3D representation as camera-control guidance, our method can faithfully reproduce the dynamic scene of an input video under novel camera trajectories. Specifically, we design a View-Content Dual-Stream Condition mechanism that injects both the source video and the warped depth sequence rendered under the target viewpoint into the pretrained video generation model. This geometric guidance signal enables VDMs to comprehend camera movements and leverage their 3D understanding capabilities, thereby facilitating precise camera control and consistent content generation. Next, we introduce a lightweight LoRA-based video diffusion adapter to train our framework, fully preserving the knowledge priors of VDMs. Additionally, we construct a large-scale multi-camera synchronized dataset named MultiCam-WarpData using Unreal Engine 5, containing 8K videos across 1K dynamic scenes. Extensive experiments show that DepthDirector outperforms existing methods in both camera controllability and visual quality. Our code and dataset will be publicly available.  
@@ -171,14 +188,14 @@
             <div class="tabs-widget">
               <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
                 <ul class="is-marginless">
-                  <li><a>dw_depth vs. Ours</a></li>
-                  <li><a>GEN3C vs. Ours</a></li>
-                  <li><a>EX4D vs. Ours</a></li>
-                  <li><a>TrajectoryCrafter vs. Ours</a></li>
+                  <li><a>depth</a></li>
+                  <li><a>GEN3C</a></li>
+                  <li><a>EX4D</a></li>
+                  <li><a>TrajectoryCrafter</a></li>
                 </ul>
               </div>
               <div class="tabs-content">
-                <div class="video-comparison" data-label="dw_depth" data-label2="Ours">
+                <div class="video-comparison" data-label="depth" data-label2="Ours">
                   <video class="video" width=100% loop playsinline muted
                     src="./static/videos/processed-1/dw_depth_vs_ours.mp4"></video>
                   <canvas></canvas>
@@ -206,14 +223,14 @@
             <div class="tabs-widget">
               <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
                 <ul class="is-marginless">
-                  <li><a>dw_depth vs. Ours</a></li>
-                  <li><a>GEN3C vs. Ours</a></li>
-                  <li><a>EX4D vs. Ours</a></li>
-                  <li><a>TrajectoryCrafter vs. Ours</a></li>
+                  <li><a>depth</a></li>
+                  <li><a>GEN3C</a></li>
+                  <li><a>EX4D</a></li>
+                  <li><a>TrajectoryCrafter</a></li>
                 </ul>
               </div>
               <div class="tabs-content">
-                <div class="video-comparison" data-label="dw_depth" data-label2="Ours">
+                <div class="video-comparison" data-label="depth" data-label2="Ours">
                   <video class="video" width=100% loop playsinline muted
                     src="./static/videos/processed-2/dw_depth_vs_ours.mp4"></video>
                   <canvas></canvas>
@@ -241,14 +258,14 @@
             <div class="tabs-widget">
               <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
                 <ul class="is-marginless">
-                  <li><a>dw_depth vs. Ours</a></li>
-                  <li><a>GEN3C vs. Ours</a></li>
-                  <li><a>EX4D vs. Ours</a></li>
-                  <li><a>TrajectoryCrafter vs. Ours</a></li>
+                  <li><a>depth</a></li>
+                  <li><a>GEN3C</a></li>
+                  <li><a>EX4D</a></li>
+                  <li><a>TrajectoryCrafter</a></li>
                 </ul>
               </div>
               <div class="tabs-content">
-                <div class="video-comparison" data-label="dw_depth" data-label2="Ours">
+                <div class="video-comparison" data-label="depth" data-label2="Ours">
                   <video class="video" width=100% loop playsinline muted
                     src="./static/videos/processed-3/dw_depth_vs_ours.mp4"></video>
                   <canvas></canvas>
@@ -276,14 +293,14 @@
             <div class="tabs-widget">
               <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
                 <ul class="is-marginless">
-                  <li><a>dw_depth vs. Ours</a></li>
-                  <li><a>GEN3C vs. Ours</a></li>
-                  <li><a>EX4D vs. Ours</a></li>
-                  <li><a>TrajectoryCrafter vs. Ours</a></li>
+                  <li><a>depth</a></li>
+                  <li><a>GEN3C</a></li>
+                  <li><a>EX4D</a></li>
+                  <li><a>TrajectoryCrafter</a></li>
                 </ul>
               </div>
               <div class="tabs-content">
-                <div class="video-comparison" data-label="dw_depth" data-label2="Ours">
+                <div class="video-comparison" data-label="depth" data-label2="Ours">
                   <video class="video" width=100% loop playsinline muted
                     src="./static/videos/processed-4/dw_depth_vs_ours.mp4"></video>
                   <canvas></canvas>
@@ -348,15 +365,7 @@
             </video>
 
             <video controls muted preload playsinline autoplay loop width="100%">
-              <source src="./static/videos/compare_7_processed.mp4" type="video/mp4">
-            </video>
-
-            <video controls muted preload playsinline autoplay loop width="100%">
               <source src="./static/videos/compare_potter1_processed.mp4" type="video/mp4">
-            </video>
-
-            <video controls muted preload playsinline autoplay loop width="100%">
-              <source src="./static/videos/compare_potter2_processed.mp4" type="video/mp4">
             </video>
 
             <video controls muted preload playsinline autoplay loop width="100%">
